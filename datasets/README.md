@@ -27,7 +27,49 @@ This folder contains datasets used in the research paper. The datasets included 
 ### DCA1 [5]
 - **Images:** Contains the DCA1 dataset images.
 - **Supervised Labels:** Contains the corresponding fully supervised labels for the DCA1 dataset.
-- **Noisy Skeleton Annotations:** Contains the noisy skeleton annotations used in the paper for DCA1 dataset.
+- **Noisy Skeleton Annotations:** Contains the noisy skeleton annotations used in the paper for DCA1 dataset. 
+- **h5 Files:** Contains h5 files with preprocessed images and their corresponding labels.
+- **Note:** We did not compare other weakly supervised segmentation methods on this dataset, so the Noisy Skeleton Annotations currently provided do not include the corresponding skeletons for the background category. However, you can easily obtain the background class skeletons by appropriately dilating the Noisy Skeleton of the foreground, inverting the grayscale (255-gray value), and then using the skeletonize operation in scikit-image to easily obtain the background class skeletons. Finally, add the background class skeletons to the foreground skeletons to obtain the complete skeletons, just like provided in other dataset folders.
+
+You can easily visualize images from h5 files using code similar to the following example:
+
+```python
+from cv2 import imwrite
+import h5py
+import numpy as np
+import cv2
+
+# Specify the name of the h5 file and its path
+name = '1'
+data_path = './' + name + '.h5'
+
+# Open the h5 file in read mode
+img = h5py.File(data_path, 'r')
+
+# Print the keys in the h5 file
+print(img.keys())
+
+# Access and print the shapes of the image and label datasets
+print(img['image'].shape, img['label'].shape)
+# print(img['image'].shape, img['label'].shape, img['scribble'].shape)
+
+
+# Load image and label data from the h5 file
+img_data = img['image'][:]
+label = img['label'][:]
+
+# Save the loaded image and label data as image files
+cv2.imwrite('./' + name + '_img.png', img_data * 255.)
+cv2.imwrite('./' + name + '_label.png', label * 127.)
+# cv2.imwrite('./' + name + '_scribble.png', scribble*127.)
+
+
+# Print information about the loaded image data
+print(img_data)
+print("Max pixel value:", np.max(img_data))
+print("Min pixel value:", np.min(img_data))
+print("Unique labels:", np.unique(label)) 
+```
 
 These datasets are provided here to facilitate the reproducibility of the research results presented in the paper. Please refer to the paper for details on how these datasets were used in the experiments.
 
