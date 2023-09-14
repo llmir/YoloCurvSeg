@@ -8,21 +8,26 @@ This folder contains datasets used in the research paper. The datasets included 
 - **Images:** Contains the OCTA500 dataset images.
 - **Supervised Labels:** Contains the corresponding fully supervised labels for the OCTA500 dataset.
 - **Noisy Skeleton Annotations:** Contains the noisy skeleton annotations used in the paper for OCTA500 dataset.
-
+- **h5 Files:** Contains h5 files with preprocessed images and their corresponding labels.
+- **Note:** "Noisy Skeleton Annotations (only foreground)" is used for our method and is solely used for dilation to inpaint and obtain the background images. On the other hand, "Noisy Skeleton Annotations (both foreground and background)" are used for training other weakly supervised methods for comparison purposes. Same for CORN, DRIVE and CHASEDB1.
+  
 ### CORN [2]
 - **Images:** Contains the CORN dataset images.
 - **Supervised Labels:** Contains the corresponding fully supervised labels for the CORN dataset.
 - **Noisy Skeleton Annotations:** Contains the noisy skeleton annotations used in the paper for CORN dataset.
+- **h5 Files:** Contains h5 files with preprocessed images and their corresponding labels.
 
 ### DRIVE [3]
 - **Images:** Contains the DRIVE dataset images.
 - **Supervised Labels:** Contains the corresponding fully supervised labels for the DRIVE dataset.
 - **Noisy Skeleton Annotations:** Contains the noisy skeleton annotations used in the paper for DRIVE dataset.
+- **h5 Files:** Contains h5 files with preprocessed images and their corresponding labels.
 
 ### CHASEDB1 [4]
 - **Images:** Contains the CHASEDB1 dataset images.
 - **Supervised Labels:** Contains the corresponding fully supervised labels for the CHASEDB1 dataset.
 - **Noisy Skeleton Annotations:** Contains the noisy skeleton annotations used in the paper for CHASEDB1 dataset.
+- **h5 Files:** Contains h5 files with preprocessed images and their corresponding labels.
 
 ### DCA1 [5]
 - **Images:** Contains the DCA1 dataset images.
