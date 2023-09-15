@@ -4,7 +4,7 @@ Due to the large file size of the dataset, we have made it available for downloa
 
 ## Google Drive
 
-You can access the dataset on Google Drive by following this link: [Google Drive Dataset Folder](insert_google_drive_link_here).
+You can access the dataset on Google Drive by following this link: [Google Drive Dataset Folder](https://drive.google.com/drive/folders/1-sxa0RCO8Y3zg7lqbmiK1TWt7YM4RHA1?usp=sharing).
 
 ## Baidu NetDisk
 
