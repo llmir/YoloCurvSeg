@@ -28,7 +28,7 @@ Performance of YoloCurvSeg (coarse stage) given different labeled samples under 
 
 ## Datasets ##
 
-The datasets include OCTA500, CORN, DRIVE, CHASEDB1, and DCA1, as detailed in the **Datasets** folder. We provide comprehensive data partitions, cleaned versions (especially for CORN), and preprocessed files (available in the h5 files).
+The datasets include OCTA500, CORN, DRIVE, CHASEDB1, and DCA1, as detailed in the **Datasets** folder. We provide comprehensive data partitions, cleaned versions (especially for CORN), and preprocessed files (available in the h5 files). Five valuable benchmarks to evaluate weakly (and noisy) supervised segmentation methods.
 
 ## Component 1: Foreground Curve Generator ##
 
